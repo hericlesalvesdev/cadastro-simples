@@ -34,6 +34,7 @@ public class Main {
         while (!inputPassword.equals(senha) && !inputUserName.equals(nome)) {
 
             for (i = chances; i >= 0; chances--) {
+                System.out.println("-----------------------------------------------");
                 System.out.println("TENTE NOVAMENTE: ");
                 System.out.println("Digite o usuário: ");
                 inputUserName = sc.nextLine();

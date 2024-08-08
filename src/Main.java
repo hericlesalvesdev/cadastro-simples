@@ -18,7 +18,7 @@ public class Main {
         String inputPassword = sc.nextLine();
 
         chances = chances - 1;
-        System.out.println("Chances: " + chances);
+
 
         // aqui é a parte da lógica que confere se o user e a senha são iguais as que estão predefinidas.
 
@@ -26,6 +26,7 @@ public class Main {
             System.out.println("ACESSO AUTORIZADO");
         } else {
             System.out.println("ACESSO NEGADO");
+            System.out.println("Chances: " + chances);
         }
 
         /*enquanto o nome e a senha forem diferentes, entrará em loop até que as chances
@@ -34,6 +35,7 @@ public class Main {
         while (!inputPassword.equals(senha) && !inputUserName.equals(nome)) {
 
             for (i = chances; i >= 0; chances--) {
+                System.out.println("USUÁRIO OU SENHA INCORRETA!");
                 System.out.println("-----------------------------------------------");
                 System.out.println("TENTE NOVAMENTE: ");
                 System.out.println("Digite o usuário: ");
@@ -44,7 +46,6 @@ public class Main {
 
                 System.out.println("Chances restantes: " + chances);
 
-
                 if (inputPassword.equals(senha)) {
                     System.out.println("ACESSO AUTORIZADO");
                     break;
@@ -53,7 +54,7 @@ public class Main {
                     break;
                 }
             }
-            break;   // Outro break pq msm quando as chances acabavam o programa continuava em loop.
+            break;   // Outro break pq msm quando as chances acabavam, o programa continuava em loop.
         }
     }
 }
